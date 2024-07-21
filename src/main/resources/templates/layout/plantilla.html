@@ -1,0 +1,127 @@
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <!--ETIQUETAS link y scripts-->
+        <title>Peluditos en Adopcion</title>         
+        <meta charset="UTF-8"/>         
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>         
+        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>         
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>         
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>         
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script> 
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/> 
+    </head>
+    <body>
+        <header th:fragment="header" class="header mt-4"> <!-- Ajusta el margen superior -->
+
+
+            <nav class="navbar navbar-expand-sm navbar-white bg-white p-3">
+                
+                
+                
+
+
+                <!-- Contenido de la barra de navegación -->
+                <div class="container">
+                    
+                    <div class="col-md-6">
+                        <h1><strong><a class="navbar-brand" href="/">Peluditos en Adopcion</a></strong></h1>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a th:href="@{/registro}" class="btn bg-gray rounded-pill"><strong>Registrarse</strong></a>
+                        <a th:href="@{/iniciarSesion}" class="btn btn-custom-purple rounded-pill"><strong>Inicio de sesión</strong></a>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <!-- columna -->
+                        <ul class="navbar-nav">  
+                            <!-- internalizacion -->
+                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=es)}">ES</a></li>                                 
+                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=en)}">EN</a></li>                             
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            
+            
+
+            
+            
+            
+            
+            
+
+
+
+            <! aqui empieza el menu horizontal con fondo celeste-->
+
+
+            <section id="main-header" class="py-2">
+
+                <div>
+                    <nav class="navbar navbar-expand-lg custom-navbar nav-fill w-100">
+                        <style>
+                            .custom-navbar {
+                                background-color: #add8e6; /* Color celeste */
+                            }
+                        </style>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav justify-content-between w-100">
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/}">[[#{plantilla.inicio}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/perrito/listado}">[[#{plantilla.perrito}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/gatito/listado}">[[#{plantilla.gatitos}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/producto/listado}">[[#{plantilla.donar}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/usuario/listado}">[[#{plantilla.contacto}]]</a>
+                                </li>
+                                <li class="nav-item px-2">
+                                    <a class="nav-link" th:href="@{/usuario/listado}">[[#{plantilla.nosotros}]]</a>
+                                </li>
+
+                                <!-- Agrega más elementos aquí -->
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+
+            
+
+
+
+
+
+
+        </header>
+
+
+
+
+        <footer th:fragment="footer" class="bg-info text-white p-1 mt-4">
+            <!-- pie de pagina -->
+            <div class="container">
+                <div class="col">
+                    <p class="lead text-center">
+                        &COPY [[#{plantilla.derechos}]]
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
